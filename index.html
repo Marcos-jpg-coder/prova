@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <!-- linguagem pt br  -->
+<head>
+    <meta charset="UTF-8">
+    <!-- acentuação -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Moderno com Interações</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- corpo do site -->
+     <header>
+        <!-- cabeçalho do site, onde armazena as informações do cabeçalho -->
+        <nav>
+            <!-- navegação do site -->
+             <div class="logo">Meu Site</div> 
+                <!--  -->
+            <div class="menu-toggle" id="menuToggle">☰</div>
+            <ul class="nav-list" id="navList">
+                <!-- class lista navegação do menu hamburguer no script.js -->
+                <li><a href="#home">Início</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#contact">Contato</a></li>
+                <li><button id="themeToggle">Trocar Tema</button></li>
+                <!-- li significa list, button significa butao, butao para trocar o tema e lista para o cabeçalho -->
+            </ul>
+        </nav>
+        <button id="scrollToTop" title="Voltar ao Início">↑</button>
+        <!-- aqui era pra ter um botão para voltar ao inicio do site, mas o java script morreu e não funcionou -->
+    </header>
+
+    <main>
+        <section id="home">
+        
+            <!-- section - abre uma seção, esta no caso esta com o id home = casa ou seja apenas para dizer que esse é o começo do site, a pagina principal ou a padrão home -->
+            <!-- id = forma de chamar uma tag pra identificação no css e então configurar la -->
+            <h1>Bem-vindo ao Meu Site</h1>
+            <!--  Tags de cabeçalho, sendo <h1> o mais importante e <h6> o menos. -->
+            <p>Explore as funcionalidades!</p>
+            <!-- <P>:Define um parágrafo. -->
+        </section>
+
+        <section id="about">
+            <!-- seção sobre pra poder falar sobre o site, about us -->
+            <h2>Sobre Nós</h2>
+            <p>Informações sobre o site.</p>
+            <div class="image-carousel">
+                <!-- Usada para agrupar blocos de conteúdo e aplicar estilos ou scripts, esse no caso é para as imagens do site, essa id aqui esta apenas para poder configurar no css tamanho e afins -->
+                <img src="https://static.mundoeducacao.uol.com.br/mundoeducacao/conteudo_legenda/49e17fbc6516b5cb94698be7dec238c4.jpg" alt="Imagem 1">
+                <!-- img source = a fonte da imagem, nesse caso foi apenas endereço da imagem -->
+                <img src="https://agenciaimpacto.com.br/wp-content/uploads/2020/06/A-importancia-de-ter-um-site-hoje.jpg" alt="Imagem 2">
+                <img src="https://blog.pixdigital.com.br/wp-content/uploads/2022/02/qual-a-importancia-de-um-site-para-uma-empresa-1024x585.jpg" alt="Imagem 3">
+            </div>
+        </section>
+
+        <section id="contact">
+            <!-- seção, essa com nome de contato -->
+            <h2>Contato</h2>
+            <!--  Tags de cabeçalho, sendo <h1> o mais importante e <h6> o menos. --> 
+            <form id="contactForm">
+                <!-- formulario id = forma de contato, linkado no java script -->
+                <input type="email" id="email" placeholder="Seu e-mail" required>
+                <!-- input type=email = para o cliente digitar o email no campo requirido placeholder = email força ele a isso -->
+                <button type="submit">Enviar</button>
+                <!-- butão submit para enviar o email -->
+            </form>
+            <!-- fim do formulario -->
+            <div id="emailFeedback"></div>
+            <!-- div com id de emailfeeback para linkar no javascript e ver se o email é invalido ou invalido com uso de caracteres especiais -->
+        </section>
+    </main>
+
+    <footer>
+        <!-- o fim do site, o pé  -->
+        <p>© 2024 Meu Site. Todos os direitos reservados.</p>
+        <!-- p para abrir paragrafo -->
+    </footer>
+
+    <script src="script.js"></script>
+    <!-- comando para linkar o script no html -->
+</body>
+<!-- fim do corpo -->
+</html> 
+<!-- fim do html -->

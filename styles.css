@@ -1,0 +1,110 @@
+ body {
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+    background-color: #ffffff;
+    color: #333;
+}
+/* css do corpo do site, font family sendo a fonte usada, transition background para ter uma mudança de cor no fundo, background color a cor
+com que vai mudar */
+
+body.dark {
+    background-color: #333;
+    color: #ffffff;
+}
+
+/*cor do site no tema escuro*/
+
+header {
+    background: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+}
+/* header = o cabeçalho, background definindo a cor de fundo, color a cor branca das letras padding o tamanho das letras*/
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* nav padrão para o resto dos arquivos, ou seja se não definir o restante das outras ids dentro do nav, serão todas nesse padrão nav 
+display:flex sendo o tamanho do display, no caso flex para poder se ajustar automaticamente align items no centro, para alinhar as coisas da nav no centro */
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+/* list style é o estilo da lista, já que foi definido então não vai seguir as regras padroões usada no nav {
+diplay flex para automaticamente caber na tela definido pelo navegador */
+
+.nav-list li {
+    margin: 0 15px;
+}
+
+/* outra nav, não definida pelo padrão da nav { então essa tem a margin da lista do cabeçalho, o tamanho da margem
+  Margem externa */
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+/* css para fazer com que o mause em cima de um botão vire um ponteiro, cursor pointer
+e display none para não aparecer mensagens no topo da tela quando clicado no botão */
+
+.image-carousel img {
+    width: 100%;
+    max-width: 300px;
+    margin: 10px;
+}
+/* carrosel de imagens, que não funcionou também ou a professora não quis colocar ele no mesmo estilo de carrossel animado 
+width = largura da imagem em 100% para que ela esteja no tamanho 100% de quando você pegar ela do navegador
+max width = a largura maxima da imagem que ela pode alcançar, caso você pegue a imagem do navegador com 1000px, será definido para 300
+margin da imagem em 10 pixels Margem externa*/
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+/* butão  padrão para o resto dos buttons que não foram definidos irão seguir essa configuração padrão de 
+background color - a cor de fundo deles verde
+e a cor da fonte dentro deles exemplo:enviar branco
+border: a borda do botão nenhuma
+padding: o tamanho do botão  Preenchimento interno 
+cursor: alterar*/
+
+button:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s;
+}
+/* butão do hover transform: transformar a escala para 1.1 
+transition: o tempo da transição da transform 0.2 segundos */
+
+#scrollToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+}
+/* tag que seria usada no java, para escrolar a pagina lá pro inicio da home novamente
+position: posição fixada 
+bottom 20 px: pra especificar quão longe está do fundo da pagina ou seja do footer
+right:20px especificar quão longe está  do lado direito da página
+display:none pra não exibir pop up na tela*/
+
+/* Responsividade da nav lista  */
+@media (max-width: 768px) {
+    .nav-list {
+        display: none;
+        flex-direction: column;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+} 
+/* Media Queries permitem criar designs responsivos que se adaptam a diferentes tamanhos de tela. */
